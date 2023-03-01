@@ -3,17 +3,17 @@ package com.lewis.booking.domain.request;
 
 public class UserDiscountRequest {
 
-    private String id;
     private String userId;
     private String houseId;
     private String discountCode;
 
-    public String getId() {
-        return id;
+    public UserDiscountRequest() {
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public UserDiscountRequest(String userId, String houseId, String discountCode) {
+        this.userId = userId;
+        this.houseId = houseId;
+        this.discountCode = discountCode;
     }
 
     public String getUserId() {

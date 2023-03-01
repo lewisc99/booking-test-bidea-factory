@@ -1,6 +1,7 @@
 package com.lewis.booking.controller;
 
 import com.lewis.booking.config.ConvertTo;
+import com.lewis.booking.config.InvalidDiscountException;
 import com.lewis.booking.domain.entities.Book;
 import com.lewis.booking.domain.request.BookRequest;
 import com.lewis.booking.domain.response.BookResponse;
@@ -28,8 +29,7 @@ public class BookController {
     private ConvertTo convertTo;
 
     @PostMapping
-    public ResponseEntity<BookResponse> create(@RequestBody @Valid BookRequest bookRequest)
-    {
+    public ResponseEntity<BookResponse> create(@RequestBody @Valid BookRequest bookRequest)  {
         Book book =  convertTo.Book(bookRequest);
         BookResponse result = bookService.create(book);
         return ResponseEntity.ok(result);

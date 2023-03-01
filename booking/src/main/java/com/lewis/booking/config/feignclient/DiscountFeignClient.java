@@ -13,5 +13,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface DiscountFeignClient {
 
     @PostMapping(value="discount/v1/new")
-    ResponseEntity<UserDiscountResponse> findByEmail(@RequestBody UserDiscountRequest userDiscountRequest);
+    ResponseEntity<UserDiscountResponse> hasDiscount(@RequestBody UserDiscountRequest userDiscountRequest);
 }

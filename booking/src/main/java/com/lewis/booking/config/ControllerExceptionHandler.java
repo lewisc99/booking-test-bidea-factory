@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @ControllerAdvice
 public class ControllerExceptionHandler {
@@ -39,6 +41,17 @@ public class ControllerExceptionHandler {
 
         errorResponse.getMessage().add(exception.getCause().getMessage());
 
+        return ResponseEntity.status(status).body(errorResponse);
+    }
+
+    @ExceptionHandler(InvalidDiscountException.class)
+    public ResponseEntity<ErrorResponse> invalidDiscount(InvalidDiscountException exception, HttpServletRequest request)
+    {
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setStatusCode(status.value());
+        errorResponse.setError(status.getReasonPhrase());
+        errorResponse.getMessage().add(exception.getMessage());
         return ResponseEntity.status(status).body(errorResponse);
     }
 

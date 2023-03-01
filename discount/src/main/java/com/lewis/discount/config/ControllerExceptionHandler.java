@@ -16,7 +16,7 @@ public class ControllerExceptionHandler {
 
         UserDiscountResponse userDiscountResponse = new UserDiscountResponse();
         userDiscountResponse.setStatus(false);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(userDiscountResponse);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(userDiscountResponse);
     }
 
 }

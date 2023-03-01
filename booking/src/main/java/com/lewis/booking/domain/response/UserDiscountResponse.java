@@ -1,7 +1,7 @@
 package com.lewis.booking.domain.response;
 
 public class UserDiscountResponse {
-    private  Boolean status = true;
+    private  Boolean status;
     private Integer id;
     private String userId;
     private String houseId;

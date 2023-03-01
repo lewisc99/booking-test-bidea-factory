@@ -29,12 +29,10 @@ public class BookRequest {
     @NotNull(message = "phone Number cannot be null")
     private String phoneNumber;
     @NotNull(message = "start Date Number cannot be null")
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private LocalDateTime startDate;
+    private String startDate;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @NotNull(message = "End Date Number cannot be null")
-    private LocalDateTime endDate;
+    private String endDate;
 
     @Size(min = 6,max = 15, message = "HouseID must have minimum 6 length and max 15 characters")
     @NotNull(message = "House Id Number cannot be null")
@@ -84,19 +82,19 @@ public class BookRequest {
         this.phoneNumber = phoneNumber;
     }
 
-    public LocalDateTime getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

@@ -1,5 +1,7 @@
 package com.lewis.discount.services.contracts;
 
+import com.lewis.discount.domain.entities.Discount;
+
 public interface DiscountService {
-    boolean get(String discountCode);
+    Discount get(String discountCode);
 }

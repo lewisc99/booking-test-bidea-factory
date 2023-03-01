@@ -15,12 +15,11 @@ public class DiscountServiceImpl implements DiscountService {
 
     @Autowired
     private DiscountRepository discountRepository;
-
     @Override
-    public boolean get(String discountCode) {
+    public Discount get(String discountCode) {
        Optional<Discount> discount =  discountRepository.findByDiscountCode(discountCode);
        if(discount.isEmpty())
-           return false;
-       return true;
+           throw new NullPointerException();
+       return discount.get();
     }
 }

@@ -10,7 +10,6 @@ public class UserDiscount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String userId;
     private String houseId;
     @ManyToOne

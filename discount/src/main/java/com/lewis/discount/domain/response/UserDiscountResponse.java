@@ -1,17 +1,22 @@
-package com.lewis.discount.domain.request;
+package com.lewis.discount.domain.response;
 
-public class UserDiscountRequest {
+public class UserDiscountResponse {
 
-    private String id;
+    private  Boolean status = true;
+    private Integer id;
     private String userId;
     private String houseId;
     private String discountCode;
 
-    public String getId() {
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -31,6 +36,10 @@ public class UserDiscountRequest {
         this.houseId = houseId;
     }
 
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
     public String getDiscountCode() {
         return discountCode;
     }
@@ -39,3 +48,4 @@ public class UserDiscountRequest {
         this.discountCode = discountCode;
     }
 }
+

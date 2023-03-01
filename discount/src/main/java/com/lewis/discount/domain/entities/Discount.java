@@ -2,6 +2,7 @@ package com.lewis.discount.domain.entities;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="tb_discount")
@@ -11,8 +12,8 @@ public class Discount {
     private  Integer id;
     private String discountCode;
 
-    @OneToMany(mappedBy = "discountCode")
-    private UserDiscount userDiscount;
+    @OneToMany(mappedBy = "discountCode", cascade = {CascadeType.MERGE,  CascadeType.PERSIST})
+    private List<UserDiscount> userDiscounts;
 
     public Integer getId() {
         return id;

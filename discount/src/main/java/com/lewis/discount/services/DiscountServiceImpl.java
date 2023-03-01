@@ -4,9 +4,13 @@ import com.lewis.discount.domain.entities.Discount;
 import com.lewis.discount.repositories.DiscountRepository;
 import com.lewis.discount.services.contracts.DiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
+
+@Service
+@Transactional
 public class DiscountServiceImpl implements DiscountService {
 
     @Autowired
@@ -15,6 +19,8 @@ public class DiscountServiceImpl implements DiscountService {
     @Override
     public boolean get(String discountCode) {
        Optional<Discount> discount =  discountRepository.findByDiscountCode(discountCode);
-       return !discountCode.isEmpty();
+       if(discount.isEmpty())
+           return false;
+       return true;
     }
 }

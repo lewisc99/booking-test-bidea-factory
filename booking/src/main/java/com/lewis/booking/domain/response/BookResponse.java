@@ -4,6 +4,15 @@ public class BookResponse {
     private Number code;
     private  String message;
 
+    public BookResponse() {
+    }
+
+    public BookResponse(Number code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+
     public Number getCode() {
         return code;
     }

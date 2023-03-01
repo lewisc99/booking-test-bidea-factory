@@ -4,9 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
-import java.time.LocalDate;
-
-
 @Entity
 @Table(name = "tb_book")
 public class Book {
@@ -15,7 +12,7 @@ public class Book {
     private String id;
     private String name;
     private String lastName;
-    private Number age;
+    private Byte age;
     private String phoneNumber;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -46,11 +43,11 @@ public class Book {
         this.lastName = lastName;
     }
 
-    public Number getAge() {
+    public Byte getAge() {
         return age;
     }
 
-    public void setAge(Number age) {
+    public void setAge(Byte age) {
         this.age = age;
     }
 

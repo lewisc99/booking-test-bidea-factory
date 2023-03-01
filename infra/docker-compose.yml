@@ -3,47 +3,23 @@ version: '3.7'
 services:
   eureka-server:
     build:
-      context: ../backend/ms-eureka-server/
+      context: ../eureka-server
       dockerfile: Dockerfile
-  ms-employee:
+  discount:
     build:
-      context: ../backend/ms-employee/
+      context: ../booking/
       dockerfile: Dockerfile
   postgres:
     image: postgres
   pgadmin:
     image: dpage/pgadmin4
-  ms-authentication:
+  booking:
     build:
-      context: ../backend/ms-authentication/
-      dockerfile: Dockerfile
-  mysql:
-    image: mysql:8.0.26
-  ms-user:
-    build:
-      context: ../backend/ms-user/
-      dockerfile: Dockerfile
-  ms-message-email:
-    build:
-      context: ../backend/ms-message-email/
-      dockerfile: Dockerfile
-  ms-api-gateway:
-    build:
-      context: ../backend/ms-api-gateway/
-      dockerfile: Dockerfile
-  zookeeper:
-    image: wurstmeister/zookeeper
-  kafka:
-    image: wurstmeister/kafka
-  web:
-    build:
-      context: ../frontend/app/
+      context: ../discount
       dockerfile: Dockerfile
 volumes:
   postgres_data:
   pgadmin_data:
-  mysql_data:
-  node_modules:
 
 
 

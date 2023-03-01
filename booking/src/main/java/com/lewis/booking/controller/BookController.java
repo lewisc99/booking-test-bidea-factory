@@ -34,5 +34,4 @@ public class BookController {
         BookResponse result = bookService.create(book);
         return ResponseEntity.ok(result);
     }
-
 }

@@ -11,35 +11,35 @@ import java.time.LocalDateTime;
 public class BookRequest {
 
     @Size(min = 9,max = 10, message = "ID must have minimum 9 and max 10 characters")
-    @NotNull(message = "id cannot be null")
+    @NotNull(message = "required property ID")
     private String id;
 
     @Size(min = 2,max = 50, message = "Name must have minimum 2 and max 50 characters")
-    @NotNull(message = "Name cannot be null")
+    @NotNull(message = "required property Name")
     private String name;
 
     @Size(min = 2,max = 50, message = "Last name must have minimum 2 and max 50 characters")
-    @NotNull(message = "lastName cannot be null")
+    @NotNull(message = "required property lastName")
     private String lastName;
     @Range(min=18, max=100, message = "Age must between 18 and 100")
-    @NotNull(message = "Age cannot be null")
+    @NotNull(message = "required property Age")
     private Number age;
 
     @Size(min = 9,max = 20, message = "Phone Number must have minimum 9 and max 20 characters")
-    @NotNull(message = "phone Number cannot be null")
+    @NotNull(message = "required property phone Number")
     private String phoneNumber;
-    @NotNull(message = "start Date Number cannot be null")
+    @NotNull(message = "required property start Date")
     private String startDate;
 
-    @NotNull(message = "End Date Number cannot be null")
+    @NotNull(message = "required property End Date")
     private String endDate;
 
-    @Size(min = 6,max = 15, message = "HouseID must have minimum 6 length and max 15 characters")
-    @NotNull(message = "House Id Number cannot be null")
+    @Size(min = 6,max = 15, message = "HouseID must have minimum 6 and max 15 characters")
+    @NotNull(message = "required property House Id")
     private String houseId;
 
-    @Size(min = 8,max = 8, message = "DiscountCode must have minimum 8 length and max 8 characters")
-    @NotNull(message = "Discount Id Number cannot be null")
+    @Size(min = 8,max = 8, message = "DiscountCode must have minimum 8 and max 8 characters")
+    @NotNull(message = "required property DiscountCODE")
     private String discountCode;
 
     public String getId() {

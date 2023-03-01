@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="user_discount")
+@Table(name="tb_user_discount")
 public class UserDiscount {
 
     @Id

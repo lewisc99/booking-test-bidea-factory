@@ -4,19 +4,15 @@ package com.lewis.discount.services;
 import com.lewis.discount.domain.entities.Discount;
 import com.lewis.discount.domain.entities.UserDiscount;
 import com.lewis.discount.domain.request.UserDiscountRequest;
-import com.lewis.discount.domain.response.ErrorResponse;
 import com.lewis.discount.domain.response.UserDiscountResponse;
 import com.lewis.discount.repositories.UserDiscountRepository;
 import com.lewis.discount.services.contracts.DiscountService;
 import com.lewis.discount.services.contracts.UserDiscountService;
-import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @Transactional

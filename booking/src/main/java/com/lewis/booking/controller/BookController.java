@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -27,7 +28,7 @@ public class BookController {
     private ConvertTo convertTo;
 
     @PostMapping
-    public ResponseEntity<BookResponse> create(@RequestBody BookRequest bookRequest)
+    public ResponseEntity<BookResponse> create(@RequestBody @Valid BookRequest bookRequest)
     {
         Book book =  convertTo.Book(bookRequest);
         BookResponse result = bookService.create(book);

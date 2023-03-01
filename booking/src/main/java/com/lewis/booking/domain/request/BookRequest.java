@@ -38,7 +38,7 @@ public class BookRequest {
     @NotNull(message = "House Id Number cannot be null")
     private String houseId;
 
-    @Size(min = 8,max = 8, message = "HouseID must have minimum 8 length and max 8 characters")
+    @Size(min = 8,max = 8, message = "DiscountCode must have minimum 8 length and max 8 characters")
     @NotNull(message = "Discount Id Number cannot be null")
     private String discountCode;
 

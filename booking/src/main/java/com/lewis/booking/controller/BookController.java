@@ -40,7 +40,6 @@ public class BookController {
 
 
     @PostMapping
-    @CircuitBreaker(name = "sample-api", fallbackMethod = "serverDiscountUnavailable")
     @RateLimiter(name="default")
     @Retry(name = "sample-api")
     @ApiOperation(value="create a new Booking",
@@ -52,15 +51,4 @@ public class BookController {
         BookResponse result = bookService.create(book);
         return ResponseEntity.ok(result);
     }
-
-    public ResponseEntity<ErrorResponse> serverDiscountUnavailable(Exception ex)
-    {
-        ErrorResponse errorResponse  = new ErrorResponse();
-        errorResponse.setStatusCode(500);
-        errorResponse.setError("Server Unavailable");
-        errorResponse.getMessage().add("No servers available for service: discount");
-        return ResponseEntity.ok(errorResponse);
-    }
-
-
 }

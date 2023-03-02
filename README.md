@@ -20,7 +20,7 @@ finalizar guardar los datos del request en una bbdd postgresql. </p>
 
 <br/>
 <hr>
-<p>para ejecutar la aplicación sigue el video<p/>
+<p style="color:red;">para ejecutar la aplicación sigue el video<p/>
 <p>Aplicação</p><img src="img/microservice-bide-factory.gif">
 <br/>
 <br/>
@@ -30,6 +30,8 @@ y cree los servidores para dbbook y dbdiscount simplemente siga el regalo que mu
 poco después, se creará automáticamente una base de datos con el nombre "ms_discount" en el servidor dbdiscount, realiza una consulta y ejecuta el siguiente
  comando que se encuentra en el archivo discount.sql, luego puede probar la aplicación mediante el host "http: //localhost:8001 /swagger-ui/index.html#/"</p>
 <br/>
+<p style="color:red;"> O si lo prefiere si tiene instalado Java 11, postgreSQL simplemente ejecute las siguientes aplicaciones en orden, eureka-server > discount > book
+</br>
 <p>Swagger</p><img src="img/swagger.JPG">
 <p>docker</p><img src="img/docker.JPG">
 <p>Database</p><img src="img/database.JPG">

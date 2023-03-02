@@ -23,7 +23,7 @@ public class BookRequest {
     private String lastName;
     @Range(min=18, max=100, message = "Age must between 18 and 100")
     @NotNull(message = "required property Age")
-    private Number age;
+    private Integer age;
 
     @Size(min = 9,max = 20, message = "Phone Number must have minimum 9 and max 20 characters")
     @NotNull(message = "required property phone Number")
@@ -66,11 +66,11 @@ public class BookRequest {
         this.lastName = lastName;
     }
 
-    public Number getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Number age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

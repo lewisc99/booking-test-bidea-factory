@@ -58,7 +58,7 @@ public class ControllerExceptionHandler {
     }
 
     @ExceptionHandler(FeignException.FeignServerException.class)
-    public ResponseEntity<ErrorResponse> invalidDiscount(FeignException.FeignServerException exception, HttpServletRequest request)
+    public ResponseEntity<ErrorResponse> ServerDiscountUnavailable(FeignException.FeignServerException exception, HttpServletRequest request)
     {
         HttpStatus status = HttpStatus.SERVICE_UNAVAILABLE;
         ErrorResponse errorResponse = new ErrorResponse();

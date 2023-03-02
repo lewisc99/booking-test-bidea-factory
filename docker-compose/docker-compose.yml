@@ -9,7 +9,7 @@ services:
     build:
       context: ../booking/
       dockerfile: Dockerfile
-  postgres:
+  db:
     image: postgres
   pgadmin:
     image: dpage/pgadmin4

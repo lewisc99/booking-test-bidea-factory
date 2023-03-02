@@ -16,10 +16,10 @@ services:
     image: postgres
   pgadmin:
     image: dpage/pgadmin4
-#  booking:
-#    build:
-#      context: ../discount
-#      dockerfile: Dockerfile
+  booking:
+    build:
+      context: ../booking
+      dockerfile: Dockerfile
 volumes:
   postgres_data:
   pgadmin_data:

@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
   discount:
     build:
-      context: ../booking/
+      context: ../discount/
       dockerfile: Dockerfile
     depends_on:
       - eureka-server

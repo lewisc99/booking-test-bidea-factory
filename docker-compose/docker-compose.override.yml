@@ -22,7 +22,7 @@ services:
     networks:
       - booking-network
   pgadmin:
-    container_name: ms-container-pgadmin
+    container_name: ms-pg-admin
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
       - PGADMIN_DEFAULT_PASSWORD=admin
@@ -42,26 +42,27 @@ services:
       - booking-network
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ms_discount
+      - SPRING_PROFILES_ACTIVE=prod
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=admin
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
     links:
       - db
-  booking:
-    ports:
-      - "8001:8001"
-    container_name: booking
-    networks:
-      - booking-network
-    depends_on:
-      - eureka-server
-      - db
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:db://db:5432/ms_book
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=admin
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
-    links:
-      - db
+#  booking:
+#    ports:
+#      - "8001:8001"
+#    container_name: booking
+#    networks:
+#      - booking-network
+#    depends_on:
+#      - eureka-server
+#      - db
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:db://db:5432/ms_book
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=admin
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+#    links:
+#      - db
 networks:
   booking-network:

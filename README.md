@@ -20,43 +20,20 @@ finalizar guardar los datos del request en una bbdd postgresql. </p>
 
 <br/>
 <hr>
-<p> cómo usar<p/>
-<p>Login Page</p><img src="img/microservice-bide-factory.gif">
-<br/>
-
-## 🖼 Screenshot APPLICATION SCREENS <br/>
-<p>Whole application click below to the run video</p><img src="images/gym-corpus.gif">
+<p>para ejecutar la aplicación sigue el video<p/>
+<p>Aplicação</p><img src="img/microservice-bide-factory.gif">
 <br/>
 <br/>
-<p>Login Page</p><img src="images/login-page.JPG">
+<p>básicamente solo necesitará docker instalado en su máquina, en la carpeta "docker-compose" ejecuta el comando
+"docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d" justo después de que se creen los contenedores, espere un momento y abra el contenedor llamado "ms-pg-admin"
+y cree los servidores para dbbook y dbdiscount simplemente siga el regalo que muestra cómo crear los servidores en postgreSQL,
+poco después, se creará automáticamente una base de datos con el nombre "ms_discount" en el servidor dbdiscount, realiza una consulta y ejecuta el siguiente
+ comando que se encuentra en el archivo discount.sql, luego puede probar la aplicación mediante el host "http: //localhost:8001 /swagger-ui/index.html#/"</p>
 <br/>
-<br/>
-<p>chat-screen-page</p><img src="images/employee-list.JPG">
-<br/>
-<br/>
-<p>Employee Update</p><img src="images/employee-update.JPG">
-<br/>
-<br/>
-<p>Employee Details</p><img src="images/employee-details.JPG">
-<br/>
-<br/>
-<p>Employee Delete</p><img src="images/employee-delete.JPG">
-<br/>
-<br/>
-<p>User Details</p><img src="images/user-details.JPG">
-<br/>
-<br/>
-<p>User List</p><img src="images/user-list.JPG">
-<br/>
-<br/>
-<p>User Update</p><img src="images/user-update.JPG">
-<br/>
-<br/>
-<p>User Delete</p><img src="images/user-delete.JPG">
-<br/>
-<br/>
-
-<hr>
+<p>Swagger</p><img src="img/swagger.JPG">
+<p>docker</p><img src="img/docker.JPG">
+<p>Database</p><img src="img/database.JPG">
+<p>Book House</p><img src="img/book.JPG">
 
 ## Linkedin Below - Linkedin ABaixo
 

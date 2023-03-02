@@ -9,14 +9,17 @@ services:
     build:
       context: ../booking/
       dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+      - db
   db:
     image: postgres
   pgadmin:
     image: dpage/pgadmin4
-  booking:
-    build:
-      context: ../discount
-      dockerfile: Dockerfile
+#  booking:
+#    build:
+#      context: ../discount
+#      dockerfile: Dockerfile
 volumes:
   postgres_data:
   pgadmin_data:

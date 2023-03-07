@@ -1,12 +1,19 @@
-﻿﻿## 🖼 Academia "Gym Corpus" Dashboard Gestão de clientes <br/>
-<hr>
+﻿﻿<h1>🖼 Microservice Springboot Booking A House test to company Bidea Factory </h1> <br/>
 
-<h2>Descripción</h2>
-<p>OBJETIVO : Crear una API rest que permite reservar una casa, para lo cual se debe recibir un request,
-validar dicho request, si se indica algún código de descuento validarlo a través de una api rest, y para
-finalizar guardar los datos del request en una bbdd postgresql. </p>
+<h2>Description English</h2>
+<p>Goal: Create a rest API that allows you to book a house, for which a request must be received,
+validate said request, if a discount code is indicated, validate it through an api rest, and to
+Finish saving the request data in a PostgreSQL Database. </p>
 <hr>
 <br/>
+<h2>Descrição Português</h2>
+<p>Objetivo: Criar uma API rest que permita reservar uma casa, para a qual deve ser recebido um pedido,
+validar o referido pedido, se for indicado um código de desconto, validá-lo através de um api rest, e para
+Termine de salvar os dados da solicitação em um banco de dados PostgreSQL. </p>
+<hr>
+<br/>
+
+
 ## 🚀 Tech Usada<br/>
 <br/>
 - Spring Boot<br/>
@@ -20,17 +27,17 @@ finalizar guardar los datos del request en una bbdd postgresql. </p>
 
 <br/>
 <hr>
-<p style="color:red;">para ejecutar la aplicación sigue el video<p/>
+<p style="color:red;">To run the application follow the video<p/>
 <p>Aplicação</p><img src="img/microservice-bide-factory.gif">
 <br/>
 <br/>
-<p>básicamente solo necesitará docker instalado en su máquina, en la carpeta "docker-compose" ejecuta el comando
-"docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d" justo después de que se creen los contenedores, espere un momento y abra el contenedor llamado "ms-pg-admin"
-y cree los servidores para dbbook y dbdiscount simplemente siga el regalo que muestra cómo crear los servidores en postgreSQL,
-poco después, se creará automáticamente una base de datos con el nombre "ms_discount" en el servidor dbdiscount, realiza una consulta y ejecuta el siguiente
- comando que se encuentra en el archivo discount.sql, luego puede probar la aplicación mediante el host "http: //localhost:8001 /swagger-ui/index.html#/"</p>
+<p>Basically you will just need docker installed on your machine, in the "docker-compose" folder run the command
+"docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d" Right after the containers are created, wait a while and open the container named "ms-pg-admin"
+and create the servers for dbbook and dbdiscount just follow the giveaway that shows how to create the servers in postgreSQL,
+soon after, a database with the name "ms_discount" will be automatically created on the dbdiscount server, make a query and execute the following
+  command which is in the discount.sql file, then you can test the app by host "http://localhost:8001/swagger-ui/index.html#/"</p>
 <br/>
-<p style="color:red;"> O si lo prefiere si tiene instalado Java 11, postgreSQL simplemente ejecute las siguientes aplicaciones en orden, eureka-server > discount > book
+<p style="color:red;"> Or if you prefer if you have Java 11 installed, postgreSQL just run the following applications in order, eureka-server > discount > book
 </br>
 <p>Swagger</p><img src="img/swagger.JPG">
 <p>docker</p><img src="img/docker.JPG">

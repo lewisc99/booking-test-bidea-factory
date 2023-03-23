@@ -49,5 +49,4 @@ soon after, a database with the name "ms_discount" will be automatically created
 <h4 align="center">
    Created by   <a href="https://www.linkedin.com/in/luiz-carlos-b50693173/" target="_blank"> Luiz Carlos </a>
 </h4>
-
 </html>
